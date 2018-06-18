@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="Refresh" content="4; URL=http://registration.html/">  -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>My project</title>
+</head>
+<body>    
+    <div class="menu">
+                <a class="menu__logo" href="/index.html"><img src="img/logo.jpg" alt="logo"></a>
+                <ul class="menu__main">
+                    <li><a href="/index.html">Главная</a></li>
+                    <li><a href="/personalArea.html">Личный кабинет</a></li>
+                    <li><a href="#">Заявки</a>
+                     <ul class="sub">
+                         <li><a href="#">Мои заявки</a></li>
+                         <li><a href="#">Каталог</a></li>
+                     </ul>
+                    </li>
+                </ul>
+    </div>
+    <!--registation page start -->
+    <div class="registration">
+        <h3>Заполните поле регистрации</h3>
+        <form id="application" class="input" name="application" method="POST" action="./personalArea.html">
+            <div class="form">
+                <div class="section">
+                        <label for="login">Логин</label>
+                        <input type="text" placeholder="example" name="login" minlength="2" id="login" required>
+                </div>
+                <div class="section">
+                        <label>Пароль</label>
+                        <input type="password" minlength="2" placeholder="**********" name="password" required>
+                </div>
+                <div class="section">
+                        <label>ФИО</label>
+                        <input name="name" id="frmNameA" minlength="2"placeholder="Иванов Иван Иванович" required autocomplete="name">
+                </div>
+                <div class="section">
+                        <label>Номер телефона</label>
+                        <input type="tel" name="telefon" minlength="10" name="telephone" placeholder="+38(123) 456-78-90"required>
+                </div>
+                <div class="section">
+                    <label>E-mail</label>
+                    <input type="email"minlength="10" name="email" id="frmEmailA" placeholder="name@example.com" required autocomplete="email">
+                </div>
+                <!-- <div class="section">
+                    <label>Способ общения</label>
+                    <select name="communion">
+                        <option value="1">По телефону</option>
+                        <option value="2">E-mail</option>
+                    </select>
+                </div> -->
+                <div class="section">
+                    <label>Дополнительная информация</label> 
+                    <textarea name="information" cols="30" rows="10"></textarea>
+                </div>          
+                <div class="buttons">
+                    <button type="submit">Зарегистрироваться</button>
+                    <button class="reset" type="reset">Отмена</button>
+                </div>
+                <div class="save">
+                        <input type="checkbox" name="save">
+                        <p>Сохранить пароль</p>
+                </div>
+            </div>
+            
+        </form>
+    </div>    
+    <!--registation page end -->
+    <script src="js/script.js"></script>
+</body>
+</html>

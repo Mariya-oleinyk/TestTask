@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>My project</title>
+</head>
+<body>
+    <!--menu page start -->
+    <div class="menu">
+        <a class="menu__logo" href="/index.html"><img src="img/logo.jpg" alt="logo"></a>
+        <ul class="menu__main">
+            <li><a href="/index.html">Главная</a></li>
+            <li><a href="/personalArea.html">Личный кабинет</a></li>
+            <li><a href="#">Заявки</a>
+             <ul class="sub">
+                 <li><a href="#">Мои заявки</a></li>
+                 <li><a href="#">Каталог</a></li>
+             </ul>
+            </li>
+        </ul>
+    </div>   
+    <!--menu page end -->
+
+    <!-- personal area start -->
+    <div class="personalArea">
+        <div class="main-inform">
+            <img  class="foto" src="img/foto.jpg" alt="foto">
+            <div class="inform">
+                <div class="block">
+                    <p class="caption">ФИО</p>
+                    <p class="information">Иванов Иван Иванович</p>
+                </div>
+                <div class="block">
+                    <p class="caption">Номер телефона</p>
+                    <p class="information">+38 (123) 456-78-90</p>
+                </div>
+                <div class="block">
+                    <p class="caption">E-mail</p>
+                    <p class="information">example@gmail.com</p>
+                </div>
+                <div class="block">
+                    <p class="caption">Дополнительная информация</p>
+                    <p class="information">***</p>
+                </div>
+                <button class="reset">Редактировать</button>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="application">
+            <a href="#add"><button id="create">Создать заявку</button></a> 
+            <button class="application__personal">Мои заявки</button>
+            <div class="application__form" >
+                    <!-- <h3>Создать заявку</h3> -->
+                <form  method="POST" action="form.php" id="add">
+                    <div class="left">
+                        <label for="time">Время</label>
+                        <input type="date" name="date">
+                        <input type="time" name="time" id="">
+                        <label for="route">Маршрут</label>
+                        <input type="text" name="route1" placeholder="Район">
+                        <input type="text" name="route2" placeholder="Улица">
+                        <input type="text" name="route3" placeholder="Дом">
+                    </div>
+                    <div class="right">
+                        <label for="cost">Стоимость, грн.</label>
+                        <input type="number" name="cost" >
+                        <label for="place">Количество мест</label>
+                        <input type="number" name="place">
+                        <label for="text">Комментарий</label>
+                        <textarea name="text" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="create">Cоздать</button>
+                        <button class="edit">Редактировать</button>
+                        <button class="confirm">Подтвердить</button>
+                        <button class="cansel">Отменить</button>
+                    </div>
+                    <button id="closed"><img src="img/closed.png" alt="closed"></button>
+                </form>
+                
+            </div>
+        </div>
+        
+    </div>
+   
+
+    <!-- personal area end -->
+    <script>
+        // в этой задаче неважно, как именно прятать элемент
+        // например через style.display:
+        document.getElementById('create').onclick = function() {
+          document.getElementById('add').style.display = 'flex';
+        }
+        document.getElementById('closed').onclick = function() {
+          document.getElementById('add').style.display = 'none';
+        }
+      </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
